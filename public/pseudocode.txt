@@ -1,0 +1,59 @@
+Components:
+
+root div:
+-display: flex;
+width: 100%
+height: 100%
+align-items: center
+justify-items: center
+
+
+-div calculator container
+    -height 720
+    -width 460
+    -border-radius: 50
+    -background-color: #707070
+    -display: flex
+    -flex-direction: column
+-display
+    -width: 430
+    -height: 115
+    -background-color: #CECECE
+    -border-radius: 50
+-button group
+    -display: grid
+    -rows: 5
+    -columns: 4
+    -column-width: 110
+    -column-height: 110
+
+-button
+    -height: 100
+    -width: 100
+    -border-radius: 50
+    -number-color: #9CD0E3
+    -operation-color: #FFE05D
+    -equals-color: #FFA0A0
+
+
+CalcContainer component:
+    -imports Display and ButtonGroup
+    -button group and display both in body
+    -has state variable with one prop: result
+    -result is empty to start with
+    -result is passed to display as a prop and added to its children
+    -result is updated when buttons are pressed
+    -functions:
+        -delete
+            -uses slice to remove last character in state
+        -calculate
+            -evaluates the expression in state and sets state to the result
+        -clear
+            -sets state back to empty 
+        -buttonPress
+            -appends name of button pressed to the state
+
+        
+
+
+
